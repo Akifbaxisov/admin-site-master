@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>NSPSOLUTIONS</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand"><img src="img/nsp-logo (1).png" alt=""></i>
+            <h4>NSPSOLUTIONS</h4>
+        </a>
+        <ul class="side-menu">
+            <li><a href="index.html" class="active"><i class='bx bxs-dashboard icon'></i>Nəzarət lövhəsi</a></li>
+            <li class="divider" data-text="main">Main</li>
+            <li>
+                <a href="#"><i class='bx bx-info-circle icon'></i> Məlumatlar<i
+                        class='bx bx-chevrons-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Ölçü vahidləri</a></li>
+                    <li><a href="#">Mallar</a></li>
+                    <li><a href="#">Müştəri/Təchizatçı</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxs-briefcase icon'></i></i>Əməliyyatlar<i
+                        class='bx bx-chevrons-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Alış</a></li>
+                    <li><a href="#">Satış</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bx-wallet icon'></i>Kassa<i class='bx bx-chevrons-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="#">Kassa Mədaxil</a></li>
+                    <li><a href="#">Kassa Məxaric</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxs-report icon'></i></i>Hesabat<i
+                        class='bx bx-chevrons-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="stoks.html">Stoklar</a></li>
+                    <li><a href="#">Stok Maliyətlə (FİFO)</a></li>
+                    <li><a href="#">Pul hərəkəti</a></li>
+                    <li><a href="#">Mənfəət/Zərər</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- NAVBAR -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu-alt-left toggle-sidebar'></i>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search icon'></i>
+                </div>
+            </form>
+            <a href="#" class="nav-link">
+                <i class='bx bxs-bell icon icon-header'></i>
+                <span class="badge">5</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class='bx bxs-message-square-dots icon icon icon-header'></i>
+                <span class="badge">8</span>
+            </a>
+            <div class="dropdown languages-head">
+                <div class="btn btn-secondary dropdown-toggle languages-dropdown" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <strong>AZ</strong>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">EN</a></li>
+                    <li><a class="dropdown-item" href="#">AZ</a></li>
+                    <li><a class="dropdown-item" href="#">RU</a></li>
+                </ul>
+            </div>
+            <span class="divider"></span>
+            <div class="profile">
+                <img src="img/nsp-logo (1).png" alt="">
+                <ul class="profile-link">
+                    <li><a href="#"><i class='bx bxs-user-circle icon'></i>Şifrəni dəyişdir</a></li>
+                    <li><a href="#"><i class='bx bxs-log-out-circle icon'></i>Çıxış</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="content-inner">
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h4 class="no-margin-bottom">Stoklar </span></h4>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="col-sm-12 text-right">
+                                    <p>
+                                        <a class="btn-stock  btn-primary btn" href="/az/stock/create" title="Stok əlavə et"><i class='bx bx-plus bx-burst' style='color:#0f0f0f' ></i> Stok əlavə et</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="stock-index">
+                    <div class="container-fluid stok-container">
+                        <div class="main-content bg-white has-shadow">
+                            <div id="pjax-grid-view" data-pjax-container="" data-pjax-push-state
+                                data-pjax-timeout="1000">
+                                <div id="nspGrid" class="is-bs4 kv-grid-bs4 hide-resize" data-total="7" data-size="20"
+                                    data-krajee-grid="kvGridInit_0ff44bb5" data-krajee-ps="ps_nspgrid_container">
+                                    <div class="card border-primary">
+                                        <div class="card-header text-white bg-primary">
+                                            <div class="float-left">
+                                                <div class="summary"><b>7</b> elementdən <b>1-7</b> arası göstərilir.
+                                                </div>
+                                            </div>
+                                            <h5 class="m-0"></h5>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="kv-panel-before">
+                                            <div class="btn-toolbar kv-grid-toolbar toolbar-container float-right">
+                                                <div class="btn-group"><a id="nspGrid-togdata-page"
+                                                        class="btn btn-outline-secondary"><i class='bx bx-expand bx-burst' style='color:#0f0f0f'></i>All</a>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div id="nspGrid-container" class="table-responsive kv-grid-container">
+                                            <table 
+                                                class="table kv-grid-table table table-hover table-bordered table-striped kv-table-wrap">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col class="skip-export">
+                                                </colgroup>
+                                                <thead class="stock-table">
+                                                    <tr>
+                                                        <th data-label="S.No" class="kv-align-center kv-align-middle kv-merged-header"
+                                                            style="width:50px;" rowspan="2" data-col-seq="0">#
+                                                        </th>
+                                                        <th  data-label="Mal" data-col-seq="1" style="width: 30%;"><a href="/az/stock/index?sort=fk_product"
+                                                                data-sort="fk_product">Mal</a></th>
+                                                        <th  data-label="Ölçü vahidi" data-col-seq="2"  style="width: 14%;"><a href="/az/stock/index?sort=fk_unit"
+                                                                data-sort="fk_unit">Ölçü vahidi</a></th>
+                                                        <th  data-label="Miqdar" data-col-seq="3" style="width: 20%;"><a class="asc"
+                                                                href="/az/stock/index?sort=-quantity"
+                                                                data-sort="-quantity">Miqdar</a></th>
+                                                        <th  data-label="Əməliyyatlar" class="kartik-sheet-style kv-align-center kv-align-middle skip-export kv-merged-header"
+                                                            style="min-width: 180px; width: 50px;" rowspan="2"
+                                                            data-col-seq="4"> Əməliyyatlar </th>
+                                                    </tr>
+                                                    <tr id="nspGrid-filters" class="filters skip-export">
+                                                        <td data-col-seq="1"><select id="stocksearch-fk_product"
+                                                                class="form-control" name="StockSearch[fk_product]"
+                                                                 placeholder="Mal">
+                                                                <option value=""></option>
+                                                                <option value="4">Əlcək narıncı qara</option>
+                                                                <option value="1">Fırça pas sökən qara qulplu </option>
+                                                                <option value="2">Fırça pas sökən qırmızı qulp nazik
+                                                                </option>
+                                                                <option value="6">Kist Yılsan 2&quot;</option>
+                                                                <option value="18">Kobra şlanq</option>
+                                                                <option value="5">Maklavitsa 5*150</option>
+                                                                <option value="12">Profil Lezva 700qr</option>
+                                                                <option value="15">Profil qutu 750qr</option>
+                                                                <option value="9">Rulo KS 20sm tüksüz</option>
+                                                                <option value="3">Şotka yer təmizləyən yumuşaq</option>
+                                                                <option value="11">Vanna qırmızı yumru</option>
+                                                                <option value="10">Vedrə qırmızı yumru</option>
+                                                            </select>
+                                                        </td>
+                                                        <td data-col-seq="2"><select id="stocksearch-fk_unit"
+                                                                class="form-control" name="StockSearch[fk_unit]"
+                                                                placeholder="Ölçü vahidi">
+                                                                <option value=""></option>
+                                                                <option value="18">cüt</option>
+                                                                <option value="1">ədəd</option>
+                                                                <option value="2">Kg</option>
+                                                                <option value="6">L</option>
+                                                                <option value="17">m2</option>
+                                                                <option value="3">metr</option>
+                                                                <option value="15">paçka</option>
+                                                                <option value="16">top</option>
+                                                            </select>
+                                                        </td>
+                                                        <td data-col-seq="3"><input type="text"
+                                                            id="stocksearch-quantity" class="form-control"
+                                                            name="StockSearch[quantity]" placeholder="Miqdar">
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+
+                                                <!-- STOCK-BODY -->
+                                                <tbody>
+                                                    <tr class="nspGrid" data-key="2">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid" style="width:50px;"
+                                                         data-col-seq="0">1</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a href="/az/product/view?id=10" target="_blank"
+                                                         data-pjax="0">Vedrə qırmızı yumru</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">ədəd</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=2" title="Baxış"><i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=2" title="Dəyişdir"><i
+                                                                class='bx bx-edit'></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=2" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=2" title="Kopyala"><i
+                                                                class='bx bx-copy-alt'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=2" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="4">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">2</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a
+                                                                href="/az/product/view?id=12" target="_blank"
+                                                                data-pjax="0">Profil Lezva 700qr</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">metr</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=4" title="Baxış">
+                                                                <i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=4" title="Dəyişdir"><i
+                                                                    class='bx bx-edit'></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=4" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=4" title="Kopyala"><i
+                                                                    class='bx bx-copy-alt'></i></a>
+                                                            <a class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=4" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr  class="nspGrid" data-key="7">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">3</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a
+                                                                href="/az/product/view?id=4" target="_blank"
+                                                                data-pjax="0">Əlcək narıncı qara</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">cüt</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=7" title="Baxış"><i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=7" title="Dəyişdir"><i
+                                                                class='bx bx-edit'></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=7" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=7" title="Kopyala"><i
+                                                                class='bx bx-copy-alt'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=7" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="8">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">4</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a
+                                                                href="/az/product/view?id=5" target="_blank"
+                                                                data-pjax="0">Maklavitsa 5*150</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">ədəd</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=8" title="Baxış"><i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=8" title="Dəyişdir"><i
+                                                                class='bx bx-edit'></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=8" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=8" title="Kopyala"><i
+                                                                class='bx bx-copy-alt'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=8" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="9">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">5</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a
+                                                                href="/az/product/view?id=6" target="_blank"
+                                                                data-pjax="0">Kist Yılsan 2"</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">ədəd</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=9" title="Baxış"><i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=9" title="Dəyişdir"><i
+                                                                class='bx bx-edit'></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=9" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=9" title="Kopyala"><i
+                                                                class='bx bx-copy-alt'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=9" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="10">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">6</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a
+                                                                href="/az/product/view?id=9" target="_blank"
+                                                                data-pjax="0">Rulo KS 20sm tüksüz</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">ədəd</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=10" title="Baxış"><i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=10" title="Dəyişdir"><i
+                                                                class='bx bx-edit'></i></a>
+                                                                <a class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=10" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=10" title="Kopyala"><i
+                                                                class='bx bx-copy-alt'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=10" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="11">
+                                                        <td data-label="S.No" class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">7</td>
+                                                        <td data-label="Mal" class="nspGrid" data-col-seq="1"><a
+                                                                href="/az/product/view?id=15" target="_blank"
+                                                                data-pjax="0">Profil qutu 750qr</a></td>
+                                                        <td data-label="Ölçü vahidi" class="nspGrid" data-col-seq="2">metr</td>
+                                                        <td data-label="Miqdar" class="nspGrid" style="text-align:right" data-col-seq="3">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="4"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/view?id=11" title="Baxış"><i class='bx bx-low-vision'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/update?id=11" title="Dəyişdir"><i
+                                                                class='bx bx-edit'></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/stock/delete?id=11" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i class='bx bxs-trash'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/copy?id=11" title="Kopyala"><i
+                                                                class='bx bx-copy-alt'></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/stock/print?id=11" title="Çap" target="_blank"
+                                                                data-pjax="0"><i class='bx bx-printer'></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="kv-panel-after"></div>
+                                        <div class="card-footer">
+                                            <div class="kv-panel-pager">
+
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- NAVBAR -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

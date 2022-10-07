@@ -1,0 +1,63 @@
+ @import "components/header";
+ @import "components/sidebar";
+ @import "components/content";
+ @import "components/stoks";
+
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--grey: #F1F0F6;
+	--dark-grey: #8D8D8D;
+	--light: #fff;
+	--dark: #000;
+	--green: #81D43A;
+	--light-green: #E3FFCB;
+	--blue: #1775F1;
+	--light-blue: #D0E4FF;
+	--dark-blue: #0C5FCD;
+	--red: #FC3B56;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(145deg, #f8f8f8, #5ba0eb);
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+	#content {
+		position: relative;
+		width: calc(100% - 60px);
+		transition: all .3s ease;
+	}
+	nav .nav-link,
+	nav .divider {
+		display: none;
+	}
+}
+
+
+
+
+

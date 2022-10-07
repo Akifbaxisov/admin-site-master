@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="/img/nsp-logo.png" sizes="16x16" type="image/png">
+
+    <!-- METATAGS -->
+
+    <!-- TITLE -->
+    <title>Anbar Giriş</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F4F4F4;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #20202A;
+        }
+    </style>
+    <meta name="csrf-param" content="_csrf-backend">
+    <meta name="csrf-token" content="3ipv7DuHUD_FB1_okZR7xaMVzgBu6QsSXN4Adt24ZqScfx67f-o_T59kLoPLxi6c60eXQii-XEJun3gsrIoK1A==">
+
+    <link href="/assets/2e271c61/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/453acb8d/css/dropdown.css" rel="stylesheet">
+    <link href="/assets/7f53ee77/css/kv-grid.css" rel="stylesheet">
+    <link href="/assets/b0d8d34d/css/bootstrap-dialog-bs4.css" rel="stylesheet">
+    <link href="/assets/7f53ee77/css/jquery.resizableColumns.css" rel="stylesheet">
+    <link href="/assets/9a8f3cbf/css/daterangepicker.css" rel="stylesheet">
+    <link href="/assets/9a8f3cbf/css/daterangepicker-kv.css" rel="stylesheet">
+    <link href="/assets/c1c6fd1a/css/kv-widgets.css" rel="stylesheet">
+    <link href="/css/nsp-back.css" rel="stylesheet">
+    <link href="/css/fontastic.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .card-footer {
+            display: none;
+        }
+    </style>
+    <script src="/assets/2e271c61/js/bootstrap.bundle.js"></script>
+    <script src="/assets/b0d8d34d/js/dialog.js"></script>
+    <script src="/assets/9a8f3cbf/js/moment.js"></script>
+    <script src="/assets/9a8f3cbf/js/locales/az.js"></script>
+    <script>var krajeeDialogDefaults_0269f7ad = { "alert": { "type": "type-info", "title": "Information", "buttonLabel": "<span class=\"fas fa-check\"></span> Ok" }, "confirm": { "type": "type-warning", "title": "Confirmation", "btnOKClass": "btn-warning", "btnOKLabel": "<span class=\"fas fa-check\"></span> Ok", "btnCancelLabel": "<span class=\"fas fa-ban\"></span>  Cancel" }, "prompt": { "draggable": false, "title": "Information", "buttons": [{ "label": "Cancel", "icon": "fas fa-ban", "cssClass": "btn-outline-secondary" }, { "label": "Ok", "icon": "fas fa-check", "cssClass": "btn-primary" }], "closable": false }, "dialog": { "draggable": true, "title": "Information", "buttons": [{ "label": "Cancel", "icon": "fas fa-ban", "cssClass": "btn-outline-secondary" }, { "label": "Ok", "icon": "fas fa-check", "cssClass": "btn-primary" }] } };
+        var krajeeDialog_6d7f2d25 = { "id": "w2" };
+        var krajeeDialog = new KrajeeDialog(true, krajeeDialog_6d7f2d25, krajeeDialogDefaults_0269f7ad);
+        window.daterangepicker_9872ec69 = { "timePicker": true, "timePickerIncrement": 15, "locale": { "format": "DD.MM.YYYY HH:mm:ss", "separator": "-", "opens": "left", "applyLabel": "Apply", "cancelLabel": "Cancel", "fromLabel": "From", "toLabel": "To", "weekLabel": "W", "customRangeLabel": "Custom Range", "daysOfWeek": moment.weekdaysMin(), "monthNames": moment.monthsShort(), "firstDay": moment.localeData()._week.dow }, "cancelButtonClasses": "btn-secondary", "language": "az", "autoUpdateInput": false, "opens": "left", "ranges": { "Today": [moment().startOf('day'), moment().endOf('day')], "Yesterday": [moment().startOf('day').subtract(1, 'days'), moment().endOf('day').subtract(1, 'days')], "Last 7 Days": [moment().startOf('day').subtract(6, 'days'), moment().endOf('day')], "Last 30 Days": [moment().startOf('day').subtract(29, 'days'), moment().endOf('day')], "This Month": [moment().startOf('month'), moment().endOf('month')], "Last Month": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')] }, "startDate": moment().startOf('day'), "endDate": moment() };
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Main Navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand -->
+                        <a href="/" class="navbar-brand">
+                            <div class="brand-text brand-big">
+                                <img src="/img/nsp-logo.png" alt="NSPSOLUTIONS"
+                                    class="img-fluid rounded-circle admin-logo">
+                                <strong> NSPSOLUTIONS</strong>
+                            </div>
+                            <div class="brand-text brand-small">
+                                <img src="/img/nsp-logo.png" alt="NSPSOLUTIONS"
+                                    class="img-fluid rounded-circle admin-logo">
+                            </div>
+                        </a>
+                        <!-- Toggle Button-->
+                        <a id="toggle-btn" href="#" class="menu-btn active">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <li class="nav-item dropdown">
+                            <a id="ticket-count" rel="nofollow" data-target="/ticket" href="/ticket"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                                <i class="fas fa-tasks"></i>
+                                <span class="badge bg-success">
+                                    0 </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="comment-count" rel="nofollow" data-target="#" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link">
+                                <i class="far fa-comment-alt"></i>
+                                <span class="badge bg-secondary">
+                                    0 </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link user-profile">
+                                <strong> AZ </strong>
+                            </a>
+                            <ul aria-labelledby="languages" class="dropdown-menu languages">
+                                <li class="nav-item">
+                                    <a class="lang" href="/en/warehouse-in">EN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="lang" href="/az/warehouse-in">AZ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="lang" href="/ru/warehouse-in">RU</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="user-profile" rel="nofollow" data-target="#" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link user-profile">
+                                <strong>NSP Demo1</strong>
+                                <!--                            <i class="icon-user-outline"></i>-->
+                            </a>
+                            <ul aria-labelledby="user-profile" class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="/az/site/change-password" class="nav-link logout">
+                                        <div class="notification">
+                                            <div class="notification-content">
+                                                Şifrəni dəyişdir <i class="fas fa-cogs"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/az/site/logout" class="nav-link logout">
+                                        <div class="notification">
+                                            <div class="notification-content">
+                                                Çıxış <i class="fas fa-sign-out-alt"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page home-page">
+
+        <div class="page-content d-flex align-items-stretch">
+
+
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                <ul id="navbar" class="list-unstyled">
+                    <li data-menu="/dashboard">
+                        <a style="padding-left:5px !important;" href="/dashboard">
+                            <i class="icon-picture-streamline-1"></i>
+                            Nəzarət lövhəsi </a>
+                    </li>
+                    <li>
+                        <a style="padding-left:5px !important;" href="#menu_item_2" aria-expanded="false"
+                            data-toggle="collapse">
+                            <i class="icon-picture-streamline-1"></i>
+                            Məlumatlar </a>
+                        <ul id="menu_item_2" class="collapse list-unstyled">
+                            <li data-menu="/unit">
+                                <a style="padding-left:10px !important;" href="/unit">
+                                    <i class="icon-tag"></i>
+                                    Ölçü vahidləri </a>
+                            </li>
+                            <li data-menu="/product">
+                                <a style="padding-left:10px !important;" href="/product">
+                                    <i class="icon-tag"></i>
+                                    Mallar </a>
+                            </li>
+                            <li data-menu="/customer-supplier">
+                                <a style="padding-left:10px !important;" href="/customer-supplier">
+                                    <i class="icon-tag"></i>
+                                    Müştəri/Təchizatçı </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="padding-left:5px !important;" href="#menu_item_6" aria-expanded="false"
+                            data-toggle="collapse">
+                            <i class="icon-folder-settings"></i>
+                            Əməliyyatlar </a>
+                        <ul id="menu_item_6" class="collapse list-unstyled">
+                            <li data-menu="/purchase">
+                                <a style="padding-left:10px !important;" href="/purchase">
+                                    <i class="icon-tag"></i>
+                                    Alış </a>
+                            </li>
+                            <li data-menu="/sale">
+                                <a style="padding-left:10px !important;" href="/sale">
+                                    <i class="icon-tag"></i>
+                                    Satış </a>
+                            </li>
+                            <li>
+                                <a style="padding-left:10px !important;" href="#menu_item_9" aria-expanded="false"
+                                    data-toggle="collapse">
+                                    <i class="icon-tag"></i>
+                                    Kassa </a>
+                                <ul id="menu_item_9" class="collapse list-unstyled">
+                                    <li data-menu="/cash-in">
+                                        <a style="padding-left:15px !important;" href="/cash-in">
+                                            <i class="icon-tag"></i>
+                                            Kassa Mədaxil </a>
+                                    </li>
+                                    <li data-menu="/cash-out">
+                                        <a style="padding-left:15px !important;" href="/cash-out">
+                                            <i class="icon-tag"></i>
+                                            Kassa Məxaric </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a style="padding-left:10px !important;" href="#menu_item_12" aria-expanded="false"
+                                    data-toggle="collapse">
+                                    <i class="icon-tag"></i>
+                                    Anbar </a>
+                                <ul id="menu_item_12" class="collapse list-unstyled">
+                                    <li class="active" data-menu="/warehouse-in">
+                                        <a style="padding-left:15px !important;" href="/warehouse-in">
+                                            <i class="icon-tag"></i>
+                                            Anbar Giriş </a>
+                                    </li>
+                                    <li data-menu="/warehouse-out">
+                                        <a style="padding-left:15px !important;" href="/warehouse-out">
+                                            <i class="icon-tag"></i>
+                                            Anbar Çıxış </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="padding-left:5px !important;" href="#menu_item_15" aria-expanded="false"
+                            data-toggle="collapse">
+                            <i class="icon-picture-streamline-1"></i>
+                            Hesabat </a>
+                        <ul id="menu_item_15" class="collapse list-unstyled">
+                            <li data-menu="/stock">
+                                <a style="padding-left:10px !important;" href="/stock">
+                                    <i class="icon-tag"></i>
+                                    Stoklar </a>
+                            </li>
+                            <li data-menu="/stock-fifo">
+                                <a style="padding-left:10px !important;" href="/stock-fifo">
+                                    <i class="icon-tag"></i>
+                                    Stok Maliyətlə (FİFO) </a>
+                            </li>
+                            <li data-menu="/cash-flow">
+                                <a style="padding-left:10px !important;" href="/cash-flow">
+                                    <i class="icon-tag"></i>
+                                    Pul hərəkəti </a>
+                            </li>
+                            <li data-menu="/profit-loss">
+                                <a style="padding-left:10px !important;" href="/profit-loss">
+                                    <i class="icon-tag"></i>
+                                    Mənfəət/Zərər </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="nsp-progress" class="col-md-12 nsp-progress">
+                <img src="/img/nsplogo.gif" width="64px" height="64px">
+            </div>
+
+
+            <div class="content-inner">
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h2 class="no-margin-bottom">Anbar Giriş </span></h2>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="col-sm-12 text-right">
+                                    <p>
+                                        <a class="btn btn-primary" href="/az/warehouse/create?type=1"
+                                            title="Anbar Giriş"><i class="fa fa-plus"></i> Anbar Giriş əlavə et</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="warehouse-index">
+
+
+                    <div class="container-fluid">
+                        <div class="main-content bg-white has-shadow">
+                            <div id="pjax-grid-view" data-pjax-container="" data-pjax-push-state
+                                data-pjax-timeout="1000">
+
+                                <div id="nspGrid" class="is-bs4 kv-grid-bs4 hide-resize" data-total="7" data-size="20"
+                                    data-krajee-grid="kvGridInit_e2ef84d6" data-krajee-ps="ps_nspgrid_container">
+                                    <div class="card border-primary">
+                                        <div class="card-header text-white bg-primary">
+                                            <div class="float-right">
+                                                <div class="summary"><b>7</b> elementdən <b>1-7</b> arası göstərilir.
+                                                </div>
+                                            </div>
+                                            <h5 class="m-0"></h5>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="kv-panel-before">
+                                            <div class="btn-toolbar kv-grid-toolbar toolbar-container float-right">
+
+                                                <div class="btn-group"><a id="nspGrid-togdata-page"
+                                                        class="btn btn-outline-secondary"
+                                                        href="/az/warehouse-in?_togae465e4b=all"
+                                                        title="Show all data"><i class='fas fa-expand'></i> All</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div id="nspGrid-container" class="table-responsive kv-grid-container">
+                                            <table
+                                                class="kv-grid-table table table-hover table-bordered table-striped kv-table-wrap">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col class="skip-export">
+                                                </colgroup>
+                                                <thead>
+
+                                                    <tr>
+                                                        <th class="kv-align-center kv-align-middle kv-merged-header"
+                                                            style="width:50px;" rowspan="2" data-col-seq="0">#</th>
+                                                        <th data-col-seq="1"><a class="desc"
+                                                                href="/az/warehouse-in?sort=date_time"
+                                                                data-sort="date_time">Tarix saat</a></th>
+                                                        <th data-col-seq="2"><a href="/az/warehouse-in?sort=doc_no"
+                                                                data-sort="doc_no">Sənəd no</a></th>
+                                                        <th data-col-seq="3"><a
+                                                                href="/az/warehouse-in?sort=fk_customer_supplier"
+                                                                data-sort="fk_customer_supplier">Müştəri/Təchizatçı</a>
+                                                        </th>
+                                                        <th data-col-seq="4"><a href="/az/warehouse-in?sort=fk_product"
+                                                                data-sort="fk_product">Mal</a></th>
+                                                        <th data-col-seq="5"><a href="/az/warehouse-in?sort=fk_unit"
+                                                                data-sort="fk_unit">Ölçü vahidi</a></th>
+                                                        <th data-col-seq="6"><a href="/az/warehouse-in?sort=quantity"
+                                                                data-sort="quantity">Miqdar</a></th>
+                                                        <th class="sort-numerical" data-col-seq="7"><a
+                                                                href="/az/warehouse-in?sort=price"
+                                                                data-sort="price">Qiymət</a></th>
+                                                        <th data-col-seq="8"><a
+                                                                href="/az/warehouse-in?sort=transfer_doc_no"
+                                                                data-sort="transfer_doc_no">Keçid sənəd no</a></th>
+                                                        <th data-col-seq="9"><a href="/az/warehouse-in?sort=note"
+                                                                data-sort="note">Qeyd</a></th>
+                                                        <th class="kartik-sheet-style kv-align-center kv-align-middle skip-export kv-merged-header"
+                                                            style="min-width: 180px; width: 50px;" rowspan="2"
+                                                            data-col-seq="10">Əməliyyatlar</th>
+                                                    </tr>
+                                                    <tr id="nspGrid-filters" class="filters skip-export">
+                                                        <td data-col-seq="1">
+                                                            <div id="date_time-container" class="kv-drp-container">
+                                                                <div class="kv-drp-dropdown">
+                                                                    <span class="left-ind"><i
+                                                                            class="fas fa-calendar-alt"></i></span>
+                                                                    <input type="text" readonly
+                                                                        class="form-control range-value" value="">
+                                                                    <span class="right-ind kv-clear" style=""
+                                                                        title="Clear">&times;</span>
+                                                                    <span class="right-ind"><b class="caret"></b></span>
+                                                                </div>
+                                                                <input type="hidden" id="date_time" class="form-control"
+                                                                    name="date_time" placeholder="Tarix saat"
+                                                                    data-krajee-daterangepicker="daterangepicker_9872ec69">
+                                                            </div>
+                                                        </td>
+                                                        <td data-col-seq="2"><input type="text" id="doc_no"
+                                                                class="form-control" name="doc_no"
+                                                                placeholder="Sənəd no"></td>
+                                                        <td data-col-seq="3"><select id="fk_customer_supplier"
+                                                                class="form-control" name="fk_customer_supplier"
+                                                                placeholder="Müştəri/Təchizatçı">
+                                                                <option value=""></option>
+                                                                <option value="5">Cavad (MÜŞTƏRİ)</option>
+                                                                <option value="2">Hamlet Elitin yanı (MÜŞTƏRİ)</option>
+                                                                <option value="1">MƏRKƏZ (MÜŞTƏRİ/TƏCHİZATÇI)</option>
+                                                                <option value="4">Turkey (TƏCHİZATÇI)</option>
+                                                                <option value="3">Unimac (TƏCHİZATÇI)</option>
+                                                                <option value="6">Zaur Əbilov (MÜŞTƏRİ)</option>
+                                                            </select></td>
+                                                        <td data-col-seq="4"><select id="fk_product"
+                                                                class="form-control" name="fk_product"
+                                                                placeholder="Mal">
+                                                                <option value=""></option>
+                                                                <option value="4">Əlcək narıncı qara</option>
+                                                                <option value="1">Fırça pas sökən qara qulplu</option>
+                                                                <option value="2">Fırça pas sökən qırmızı qulp nazik
+                                                                </option>
+                                                                <option value="6">Kist Yılsan 2&quot;</option>
+                                                                <option value="18">Kobra şlanq</option>
+                                                                <option value="5">Maklavitsa 5*150</option>
+                                                                <option value="12">Profil Lezva 700qr</option>
+                                                                <option value="15">Profil qutu 750qr</option>
+                                                                <option value="9">Rulo KS 20sm tüksüz</option>
+                                                                <option value="3">Şotka yer təmizləyən yumuşaq</option>
+                                                                <option value="11">Vanna qırmızı yumru</option>
+                                                                <option value="10">Vedrə qırmızı yumru</option>
+                                                            </select></td>
+                                                        <td data-col-seq="5"><select id="fk_unit" class="form-control"
+                                                                name="fk_unit" placeholder="Ölçü vahidi">
+                                                                <option value=""></option>
+                                                                <option value="18">cüt</option>
+                                                                <option value="1">ədəd</option>
+                                                                <option value="2">Kg</option>
+                                                                <option value="6">L</option>
+                                                                <option value="17">m2</option>
+                                                                <option value="3">metr</option>
+                                                                <option value="15">paçka</option>
+                                                                <option value="16">top</option>
+                                                            </select></td>
+                                                        <td data-col-seq="6"><input type="text" id="quantity"
+                                                                class="form-control" name="quantity"
+                                                                placeholder="Miqdar"></td>
+                                                        <td data-col-seq="7"><input type="text" id="price"
+                                                                class="form-control" name="price" placeholder="Qiymət">
+                                                        </td>
+                                                        <td data-col-seq="8"><input type="text" id="transfer_doc_no"
+                                                                class="form-control" name="transfer_doc_no"
+                                                                placeholder="Keçid sənəd no"></td>
+                                                        <td data-col-seq="9"><input type="text" id="note"
+                                                                class="form-control" name="note" placeholder="Qeyd">
+                                                        </td>
+                                                    </tr>
+
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="nspGrid" data-key="46">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">1</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:57:47</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-7</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=9" target="_blank"
+                                                                data-pjax="0">Rulo KS 20sm tüksüz</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">ədəd</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=46" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=46" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=46" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=46" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=46" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="45">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">2</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:57:16</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-6</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=15" target="_blank"
+                                                                data-pjax="0">Profil qutu 750qr</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">metr</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=45" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=45" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=45" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=45" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=45" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="44">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">3</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:56:56</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-5</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=12" target="_blank"
+                                                                data-pjax="0">Profil Lezva 700qr</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">metr</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=44" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=44" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=44" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=44" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=44" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="43">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">4</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:56:31</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-4</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=5" target="_blank"
+                                                                data-pjax="0">Maklavitsa 5*150</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">ədəd</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=43" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=43" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=43" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=43" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=43" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="42">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">5</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:56:12</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-3</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=6" target="_blank"
+                                                                data-pjax="0">Kist Yılsan 2"</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">ədəd</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=42" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=42" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=42" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=42" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=42" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="41">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">6</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:55:45</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-2</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=4" target="_blank"
+                                                                data-pjax="0">Əlcək narıncı qara</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">cüt</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=41" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=41" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=41" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=41" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=41" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                    <tr class="nspGrid" data-key="40">
+                                                        <td class="kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="0">7</td>
+                                                        <td class="nspGrid" data-col-seq="1">19.01.2022 13:54:38</td>
+                                                        <td class="nspGrid" data-col-seq="2">A-1</td>
+                                                        <td class="nspGrid" data-col-seq="3"><a
+                                                                href="/az/customer-supplier/view?id=3" target="_blank"
+                                                                data-pjax="0">Unimac (TƏCHİZATÇI)</a></td>
+                                                        <td class="nspGrid" style="min-width:150px;" data-col-seq="4"><a
+                                                                href="/az/product/view?id=10" target="_blank"
+                                                                data-pjax="0">Vedrə qırmızı yumru</a></td>
+                                                        <td class="nspGrid" data-col-seq="5">ədəd</td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="6">
+                                                            <div class="status status-success">10,000.00</div>
+                                                        </td>
+                                                        <td class="nspGrid" style="text-align:right" data-col-seq="7">
+                                                            0.00</td>
+                                                        <td class="nspGrid" data-col-seq="8"><a
+                                                                href="/az/purchase-sale/view" target="_blank"
+                                                                data-pjax="0"></a></td>
+                                                        <td class="nspGrid" data-col-seq="9"></td>
+                                                        <td class="skip-export kv-align-center kv-align-middle nspGrid"
+                                                            style="width:50px;" data-col-seq="10"><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/view?id=40" title="Baxış"><i
+                                                                    class="far fa-eye"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/update?id=40" title="Dəyişdir"><i
+                                                                    class="fa fa-edit"></i></a><a
+                                                                class="btn btn-sm btn-danger"
+                                                                href="/az/warehouse/delete?id=40" title="Sil"
+                                                                data-confirm="Əminsinizmi?" data-method="post"
+                                                                data-icon="warning"><i
+                                                                    class="fas fa-trash-alt"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/copy?id=40" title="Kopyala"><i
+                                                                    class="fas fa-copy"></i></a><a
+                                                                class="btn btn-sm btn-success"
+                                                                href="/az/warehouse/print?id=40" title="Çap"
+                                                                target="_blank" data-pjax="0"><i
+                                                                    class="fas fa-print"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="kv-panel-after"></div>
+                                        <div class="card-footer">
+                                            <div class="kv-panel-pager">
+
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        NSPSOLUTIONS &copy; 2022 </p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p> <span style="float: left">
+                            nspBlank v2.0 </span> Hazırlanıb <a href="http://nsp.solutions"
+                            class="external">NSPSOLUTIONS</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var hostUrl = "http://site.front/uploads/";
+        var confirmBtn = "B\u0259li";
+        var defaultConfirm = "Tamam";
+        var defaultCancel = "\u0130mtina";
+        var controllerName = "\/az\/warehouse";
+        var className = "warehouse";
+        var codeGenaratorAction = "\/az\/warehouse\/code-generator";
+
+        var productController = "\/az\/product";
+
+        //var ticket_statuses = <?//= json_encode(Ticket::getStatuses())?>//;
+        //var ticket_title = "<?//= Yii::t('app', 'Ticket Status')?>//";
+        //var ticket_select = "<?//= Yii::t('app', 'Select status')?>//";
+        //var ticket_unselect_message = "<?//= Yii::t('app', 'Please choose one of the status')?>//";
+        //var ticket_status_url = "<?//= Url::to(['/ticket/update-status'])?>//";
+
+        var infiniteScroll = true;
+    </script>
+
+    <script src="/assets/607cb8b1/jquery.js"></script>
+    <script src="/assets/2e271c61/js/bootstrap.bundle.js"></script>
+    <script src="/assets/d867d814/yii.js"></script>
+    <script src="/assets/453acb8d/js/dropdown.js"></script>
+    <script src="/assets/d867d814/yii.gridView.js"></script>
+    <script src="/assets/b0d8d34d/js/bootstrap-dialog.js"></script>
+    <script src="/assets/7f53ee77/js/kv-grid-export.js"></script>
+    <script src="/assets/7f53ee77/js/jquery.resizableColumns.js"></script>
+    <script src="/assets/9a8f3cbf/js/daterangepicker.js"></script>
+    <script src="/assets/c1c6fd1a/js/kv-widgets.js"></script>
+    <script src="/assets/85dd6986/jquery.pjax.js"></script>
+    <script src="/js/nsp_backend.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/assets/b089d273/sweetalert2.all.js"></script>
+    <script>jQuery(function ($) {
+            jQuery('#w0-button').dropdown();
+            var kvGridExp_71967b88 = { "gridId": "nspGrid", "action": "/az/gridview/export/download", "module": "gridview", "encoding": "utf-8", "bom": 1, "target": "_blank", "messages": { "allowPopups": "Disable any popup blockers in your browser to ensure proper download.", "confirmDownload": "Ok to proceed?", "downloadProgress": "Generating the export file. Please wait...", "downloadComplete": "Request submitted! You may safely close this dialog after saving your downloaded file." }, "exportConversions": [{ "from": "<span class=\"glyphicon glyphicon-ok text-success\"></span>", "to": "Active" }, { "from": "<span class=\"glyphicon glyphicon-remove text-danger\"></span>", "to": "Inactive" }], "skipExportElements": [".sr-only", ".hide"], "showConfirmAlert": true };
+            var kvGridExp_12735912 = { "filename": "grid-export", "showHeader": true, "showPageSummary": true, "showFooter": true };
+            var kvGridExp_9c072a05 = { "dialogLib": "krajeeDialog", "gridOpts": kvGridExp_71967b88, "genOpts": kvGridExp_12735912, "alertMsg": "The HTML export file will be generated for download.", "config": { "cssFile": ["https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", "https://cdn.bootcss.com/font-awesome/5.3.1/css/all.css"] } };
+            var kvGridExp_174c9370 = { "dialogLib": "krajeeDialog", "gridOpts": kvGridExp_71967b88, "genOpts": kvGridExp_12735912, "alertMsg": "The CSV export file will be generated for download.", "config": { "colDelimiter": ",", "rowDelimiter": "\r\n" } };
+            var kvGridExp_491ff704 = { "dialogLib": "krajeeDialog", "gridOpts": kvGridExp_71967b88, "genOpts": kvGridExp_12735912, "alertMsg": "The TEXT export file will be generated for download.", "config": { "colDelimiter": "\t", "rowDelimiter": "\r\n" } };
+            var kvGridExp_f608bafb = { "dialogLib": "krajeeDialog", "gridOpts": kvGridExp_71967b88, "genOpts": kvGridExp_12735912, "alertMsg": "The EXCEL export file will be generated for download.", "config": { "worksheet": "ExportWorksheet", "cssFile": "" } };
+            var kvGridExp_d1013543 = { "dialogLib": "krajeeDialog", "gridOpts": kvGridExp_71967b88, "genOpts": kvGridExp_12735912, "alertMsg": "The PDF export file will be generated for download.", "config": { "mode": "UTF-8", "format": "A4-L", "destination": "D", "marginTop": 20, "marginBottom": 20, "cssInline": ".kv-wrap{padding:20px}", "methods": { "SetHeader": [{ "odd": { "L": { "content": "Yii2 Grid Export (PDF)", "font-size": 8, "color": "#333333" }, "C": { "content": "Grid Export", "font-size": 16, "color": "#333333" }, "R": { "content": "Generated: Thu, 27-Jan-2022", "font-size": 8, "color": "#333333" } }, "even": { "L": { "content": "Yii2 Grid Export (PDF)", "font-size": 8, "color": "#333333" }, "C": { "content": "Grid Export", "font-size": 16, "color": "#333333" }, "R": { "content": "Generated: Thu, 27-Jan-2022", "font-size": 8, "color": "#333333" } } }], "SetFooter": [{ "odd": { "L": { "content": "© Krajee Yii2 Extensions", "font-size": 8, "font-style": "B", "color": "#999999" }, "R": { "content": "[ {PAGENO} ]", "font-size": 10, "font-style": "B", "font-family": "serif", "color": "#333333" }, "line": true }, "even": { "L": { "content": "© Krajee Yii2 Extensions", "font-size": 8, "font-style": "B", "color": "#999999" }, "R": { "content": "[ {PAGENO} ]", "font-size": 10, "font-style": "B", "font-family": "serif", "color": "#333333" }, "line": true } }] }, "options": { "title": "Grid Export", "subject": "PDF export generated by kartik-v/yii2-grid extension", "keywords": "krajee, grid, export, yii2-grid, pdf" }, "contentBefore": "", "contentAfter": "" } };
+            var kvGridExp_e384a7ab = { "dialogLib": "krajeeDialog", "gridOpts": kvGridExp_71967b88, "genOpts": kvGridExp_12735912, "alertMsg": "The JSON export file will be generated for download.", "config": { "colHeads": [], "slugColHeads": false, "jsonReplacer": function (k, v) { return typeof (v) === 'string' ? $.trim(v) : v }, "indentSpace": 4 } };
+            var kvGridInit_e2ef84d6 = function () {
+                jQuery('#nspGrid .export-html').gridexport(kvGridExp_9c072a05); jQuery('#nspGrid .export-csv').gridexport(kvGridExp_174c9370); jQuery('#nspGrid .export-txt').gridexport(kvGridExp_491ff704); jQuery('#nspGrid .export-xls').gridexport(kvGridExp_f608bafb); jQuery('#nspGrid .export-pdf').gridexport(kvGridExp_d1013543); jQuery('#nspGrid .export-json').gridexport(kvGridExp_e384a7ab); jQuery('#nspGrid-container').resizableColumns('destroy').resizableColumns({ "store": null, "resizeFromBody": false });
+            };
+            kvGridInit_e2ef84d6();
+            jQuery('#nspGrid').yiiGridView({ "filterUrl": "\/az\/warehouse-in", "filterSelector": "#nspGrid-filters input, #nspGrid-filters select", "filterOnFocusOut": true });
+            jQuery("#date_time").off('change.kvdrp').on('change.kvdrp', function (e) {
+                var drp = jQuery("#date_time-container").find('.kv-drp-dropdown').data('daterangepicker'), fm, to;
+                if ($(this).val() || !drp) {
+                    return;
+                }
+                fm = moment().startOf('day').format('DD.MM.YYYY HH:mm:ss') || '';
+                to = moment().format('DD.MM.YYYY HH:mm:ss') || '';
+                drp.setStartDate(fm);
+                drp.setEndDate(to);
+
+            }); jQuery("#date_time-container").find('.kv-drp-dropdown').on('apply.daterangepicker', function () {
+                var drp = jQuery("#date_time-container").find('.kv-drp-dropdown').data('daterangepicker'), newValue = drp.startDate.format(drp.locale.format);
+                if (!drp.singleDatePicker) {
+                    newValue += drp.locale.separator + drp.endDate.format(drp.locale.format);
+                }
+                if (newValue !== jQuery("#date_time").val()) {
+                    jQuery("#date_time").val(newValue).trigger('change');
+                }
+            });
+            jQuery("#date_time-container").find('.kv-drp-dropdown').find('.range-value').attr('placeholder', jQuery("#date_time").attr('placeholder'));
+            jQuery("#date_time-container").find('.kv-drp-dropdown').find('.kv-clear').on('click', function (e) {
+                e.stopPropagation();
+                jQuery("#date_time-container").find('.kv-drp-dropdown').find('.range-value').val('');
+                jQuery("#date_time").val('').trigger('change').trigger('cancel.daterangepicker');
+            });
+            jQuery && jQuery.pjax && (jQuery.pjax.defaults.maxCacheLength = 0);
+            if (jQuery('#date_time').data('daterangepicker')) { jQuery('#date_time').daterangepicker('destroy'); }
+            jQuery("#date_time-container").find('.kv-drp-dropdown').daterangepicker(daterangepicker_9872ec69, function (start, end, label) { var val = start.format('DD.MM.YYYY HH:mm:ss') + '-' + end.format('DD.MM.YYYY HH:mm:ss'); jQuery("#date_time-container").find('.kv-drp-dropdown').find('.range-value').val(val); jQuery("#date_time").val(val).trigger('change'); });
+            jQuery("#date_time-container").find('.kv-drp-dropdown').on('cancel.daterangepicker', function (ev, picker) {
+                var dtp = picker.element[0].nextElementSibling;
+                $(dtp).val('').trigger('change');
+            });
+
+            jQuery(document).pjax("#pjax-grid-view a", { "push": true, "replace": false, "timeout": 1000, "scrollTo": false, "container": "#pjax-grid-view" });
+            jQuery(document).off("submit", "#pjax-grid-view form[data-pjax]").on("submit", "#pjax-grid-view form[data-pjax]", function (event) { jQuery.pjax.submit(event, { "push": true, "replace": false, "timeout": 1000, "scrollTo": false, "container": "#pjax-grid-view" }); });
+            menuitem = $("li[data-menu='/warehouse-in']")[0];
+            $(menuitem).parents().addClass('show');
+
+            setCookie("byHuman", false, 365);
+            $('#toggle-btn').click();
+        });</script>
+</body>
+
+</html>
